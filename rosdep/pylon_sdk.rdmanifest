@@ -36,7 +36,7 @@ install-script: |
 check-presence-script: |
   #!/bin/bash
   if [ "${PYLON_ROOT}" = "" ]; then
-    find /opt -type f -name pylon-config
+    sudo find /opt -type f -name pylon-config
     FOUND=$?
     if [ "$FOUND" -eq 0 ]; then
       for pylon_install in `find /opt -type f -name pylon-config`; do
